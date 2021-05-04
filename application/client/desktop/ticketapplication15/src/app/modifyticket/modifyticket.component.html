@@ -1,0 +1,40 @@
+<h2 class="screen-align">ModifyTicket</h2>
+<div id="template-iy9g" class="row">
+    <div id="template-ijw3" class="cell">
+        <label id="template-ikli" class="label">Name</label>
+        <input id="template-i0yp" [(ngModel)]="tickets.name" [ngModelOptions]="{standalone: true}"
+        class="input form-control" />
+    </div>
+    <div id="template-i4cw" class="cell">
+        <label id="template-idff" class="label">Description</label>
+        <input id="template-igur" [(ngModel)]="tickets.description"
+        [ngModelOptions]="{standalone: true}" class="input form-control" />
+    </div>
+    <div id="template-io4b" class="cell">
+        <label id="template-ivbv" class="label">Groups</label>
+        <input id="template-ib95u" [(ngModel)]="tickets.groups"
+        [ngModelOptions]="{standalone: true}" class="input form-control" />
+    </div>
+</div>
+<div id="template-iphmn" class="row">
+    <div id="template-ipx5e" class="cell">
+        <label id="template-ipxvq" class="label">Types</label>
+        <div id="template-ia5ph" class="">
+            <ng-select id="template-itm9n" name="dynamicdropdown_template-itm9n" [searchable]="true"
+            [virtualScroll]="true" [items]="TypesitemArray" bindLabel="name" bindValue="name"
+            [(ngModel)]="tickets.types" [ngModelOptions]="{standalone: true}" (click)="TypesGpGetAllValues()"
+            class="form-control"></ng-select>
+        </div>
+        <button id="template-i4eix" (click)="GpUpdate()" class="button btn btn-primary">Update</button>
+    </div>
+    <div id="template-iwsfa" class="cell">
+        <label id="template-ixv1n" class="label">Severity</label>
+        <div id="template-i6ttg" class="">
+            <ng-select id="template-iku4v" name="dynamicdropdown_template-iku4v" [searchable]="true"
+            [virtualScroll]="true" [items]="severityitemArray" bindLabel="name" bindValue="name"
+            [(ngModel)]="tickets.severity" [ngModelOptions]="{standalone: true}" (click)="severityGpGetAllValues()"
+            class="form-control"></ng-select>
+        </div>
+    </div>
+    <div id="template-ilp8o" class="cell"></div>
+</div>
